@@ -42,8 +42,8 @@ class App extends Component {
       <div id="main">
         <ol>
           {this.cityList.map((ele, index) => {
-            if (index <= 3)
-              return <li key={"location" + { index }}>{ele.name}</li>;
+            if (index < 3)
+              return <li key={"location" + parseInt(index) + 1}>{ele.name}</li>;
           })}
         </ol>
       </div>
